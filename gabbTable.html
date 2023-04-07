@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Sandro e Pomodori</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html#homeLink">home</a></li>
+            <li><a href="index.html#speseLink">spese</a></li>
+            <li><a href="guadTable.html">guadagni</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="guadTit spesaTit">GABBIETTE</h1>
+    <br>
+    <section class="guadSec" id="guadSecs">
+        <div class="tableGuad">
+            <div class="tableHead">
+                <h3>Nome</h3>
+                <h3>Guadagni</h3>
+                <h3>Data</h3>
+                <h3>Commento</h3>
+            </div>
+            <div class="tableCell">
+                <input class="formField gabbField" type="text" id="nomeGabb0">
+                <input class="formField gabbField" type="number" id="gabbProd0">
+                <input class="formField gabbField" type="date" id="dataGabb0">
+                <textarea class="formField gabbField" id="commentoGabb0"></textarea>
+            </div>
+        </div>
+
+
+        <section class="btns">
+            <button class="saveBtn" onclick="saveDataGabb()">SAVE</button>
+            <button class="saveBtn" onclick="newRowGabb()">NEW</button>
+            <button class="saveBtn" onclick="deleteAll()">DELETE</button>
+        </section>
+    </section>
+
+    <script src="script/gabbScript.js"></script>
+</body>
+
+</html>

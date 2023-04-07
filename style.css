@@ -1,0 +1,314 @@
+:root {
+  --primaryCol: beige;
+
+  --noMoney: #b33131;
+  --yesMoney: #4cb431;
+  --profCol: #3f3f3f;
+
+  --ff-primaryCol: rgb(70, 70, 63);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+nav,
+nav ul {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+
+  background-color: var(--primaryCol);
+  width: 100%;
+  height: 48px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  text-transform: uppercase;
+}
+
+nav ul li a {
+  padding: 8px 14px;
+  border-radius: 15px;
+  transition: 0.5s;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--ff-primaryCol);
+}
+
+nav ul li a:hover,
+.saveBtn:hover {
+  transition: 0.5s;
+  background-color: var(--ff-primaryCol);
+  color: var(--primaryCol);
+}
+
+#Main {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.cont {
+  color: var(--ff-primaryCol);
+  text-transform: uppercase;
+  font-weight: 900;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  padding: 5px;
+}
+
+.cont h2 {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+}
+
+.more,
+.most,
+.less {
+  color: var(--yesMoney);
+  border: 3px solid;
+  border-radius: 10px;
+}
+
+.less {
+  color: var(--noMoney);
+}
+
+.most {
+  color: var(--profCol);
+}
+
+.cont span {
+  font-size: 20px;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+main section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.spesaTit {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: var(--noMoney);
+}
+
+.spesaSec,
+.guadSec {
+  position: relative;
+  width: 100%;
+  height: 78vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.guadSec,
+.guadTit {
+  position: absolute;
+  top: 12%;
+}
+
+.guadSec {
+  top: 22%;
+}
+
+.tableSpesa,
+.tableGuad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.tableCell input,
+.tableCell textarea {
+  width: 120px;
+  height: 25px;
+}
+
+.tableHead {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  gap: 12px;
+  font-weight: bold;
+}
+
+.tableHead h3 {
+  flex-basis: 25%;
+}
+
+.tableCell {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+.formField {
+  width: 25%;
+  height: 25px;
+}
+
+.formField,
+textarea {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 6px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.formField[type="text"] {
+  text-transform: capitalize;
+}
+
+textarea {
+  width: 100%;
+  height: 60px;
+  resize: vertical;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  align-self: flex-end;
+}
+
+.saveBtn {
+  transition: 0.5s;
+  background-color: var(--primaryCol);
+  border-radius: 10px;
+  cursor: pointer;
+
+  padding: 8px 16px;
+}
+
+.btn-less {
+  transition: 0.5s;
+  background-color: #fff;
+
+  color: var(--noMoney);
+  border: 3px solid;
+  border-radius: 5px;
+  padding: 6px 14px;
+
+  font-weight: bolder;
+  font-style: italic;
+}
+
+.btn-more {
+  color: var(--yesMoney);
+}
+
+.btn-most {
+  color: var(--profCol);
+}
+
+.btn-less:hover {
+  transition: 0.5s;
+  transform: scale(90%);
+  font-size: larger;
+
+  cursor: pointer;
+}
+
+#homeLink {
+  position: absolute;
+  top: 0;
+}
+
+#speseLink {
+  position: absolute;
+  top: -30%;
+}
+
+.guadTit {
+  color: var(--yesMoney);
+}
+
+.gabb {
+  border: 3px solid;
+  border-radius: 10px;
+}
+
+.prod {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.prod span {
+  text-transform: lowercase;
+  text-align: center;
+}
+
+.prodField {
+  width: 120px;
+}
+
+.vendField {
+  width: 105px;
+}
+
+.gabb a {
+  text-decoration: none;
+  color: var(--ff-primaryCol);
+  transition: 0.5s;
+}
+
+.gabb a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: var(--ff-primaryCol);
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.gabb a:hover::after {
+  width: 100%;
+}
+
+.flex {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.flex div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
