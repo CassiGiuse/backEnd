@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="libraries/p5.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <title>Sandro e Pomodori</title>
+</head>
+
+<body>
+
+  <main id="Main">
+    <nav>
+      <ul>
+        <li><a href="#homeLink">home</a></li>
+        <li><a href="#speseLink">spese</a></li>
+        <li><a href="guadTable.html">guadagni</a></li>
+      </ul>
+    </nav>
+
+
+
+    <a id="homeLink"></a>
+    <section>
+      <div class="cont less">
+        <h2>spese</h2>
+        <span id="spese">€</span>
+      </div>
+      <div class="cont more">
+        <h2>guadagni</h2>
+        <span id="guadagni">€</span>
+      </div>
+      <div class="cont most">
+        <h2>profitto</h2>
+        <span id="profitto">€</span>
+      </div>
+
+      <div class="cont gabb">
+        <h2>GABBIETTE</h2>
+        <div class="prod">
+          <div>
+            <h3>PRODOTTE</h3>
+            <input type="number" id="gabbProd" class="prodField" onchange="saveGabb()" placeholder="qt. prodotte">
+          </div>
+          <div>
+            <h3>VENDUTE</h3>
+            <span id="vendGabb">qt.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <h1 class="spesaTit">Spesa</h1>
+  <br>
+  <section class="spesaSec" id="spesaSecs">
+    <a id="speseLink"></a>
+
+    <div class="tableSpesa">
+      <div class="tableHead">
+        <h3>Nome</h3>
+        <h3>Spesa</h3>
+        <h3>Data</h3>
+        <h3>Commento</h3>
+      </div>
+      <div class="tableCell">
+        <input class="formField" type="text" id="nomeProd0">
+        <input class="formField" type="number" id="spesaProd0">
+        <input class="formField" type="date" id="dataProd0">
+        <textarea class="formField" id="commentoProd0"></textarea>
+      </div>
+    </div>
+
+
+    <section class="btns">
+      <button class="saveBtn" onclick="saveData()">SAVE</button>
+      <button class="saveBtn" onclick="newRow()">NEW</button>
+      <button class="saveBtn" onclick="deleteAll()">DELETE</button>
+    </section>
+  </section>
+
+
+
+  <script src="script/sketch.js"></script>
+</body>
+
+</html>
